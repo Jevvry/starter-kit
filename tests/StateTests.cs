@@ -20,13 +20,13 @@ namespace bot
         [TestCase("Some|init|data", "Some input|copy pasted from|error stream")]
         public void Solve(string initInput, string stepInput)
         {
-            var reader = new ConsoleReader(initInput + "|" + stepInput);
-            var state = reader.ReadState();
-            Console.WriteLine(state);
+//             var reader = new ConsoleReader(initInput + "|" + stepInput);
+//             var state = reader.ReadState();
+//             Console.WriteLine(state);
 
-            var solver = new Solver();
-            var move = solver.GetCommand(state, int.MaxValue);
-            Console.WriteLine(move);
+//             var solver = new Solver();
+//             var move = solver.GetCommand(state, int.MaxValue);
+//             Console.WriteLine(move);
 
         }
     }
