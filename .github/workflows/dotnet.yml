@@ -1,0 +1,38 @@
+name: Build & Test
+
+on: push
+
+jobs:
+  build-and-tests:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+      
+    - name: Move builder.cs   
+      run: |
+        cd D:\a\CodeVsZombies\CodeVsZombies\builder\bin\net5.0
+        dotnet builder.dll ../../../
+        [System.IO.File]::Copy('D:\a\CodeVsZombies\CodeVsZombies\builder\bin\net5.0\build.cs', "D:\a\CodeVsZombies\CodeVsZombies\build.cs", 'true');
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add -A
+        git commit -m "Push build.cs"
+        git push
+        
+              
