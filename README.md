@@ -1,3 +1,5 @@
+[![Build & Test](https://github.com/TonyCardio/CodeVsZombies/actions/workflows/dotnet.yml/badge.svg)](https://github.com/TonyCardio/CodeVsZombies/actions/workflows/dotnet.yml)
+
 # starter-kit
 Заготовка для написания ботов CodinGame.com
 
