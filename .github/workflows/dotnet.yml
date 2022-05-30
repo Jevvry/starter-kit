@@ -24,9 +24,9 @@ jobs:
       
     - name: Move builder.cs   
       run: |
-        cd D:\a\CodeVsZombies\CodeVsZombies\builder\bin\net6.0
+        cd D:\a\starter-kit\starter-kit\builder\bin\net6.0\builder.dll
         dotnet builder.dll ../../../
-        [System.IO.File]::Copy('D:\a\CodeVsZombies\CodeVsZombies\builder\bin\net6.0\build.cs', "D:\a\CodeVsZombies\CodeVsZombies\build.cs", 'true');
+        [System.IO.File]::Copy(' D:\a\starter-kit\starter-kit\builder\bin\net6.0\build.cs', " D:\a\starter-kit\starter-kit\build.cs", 'true');
     - name: Commit and push changes
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
