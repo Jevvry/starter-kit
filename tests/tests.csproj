@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="nunit" Version="3.13.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
     <ProjectReference Include="../bot/bot.csproj" />
     <ProjectReference Include="../lib/lib.csproj" />
   </ItemGroup>
