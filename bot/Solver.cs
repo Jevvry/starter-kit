@@ -6,7 +6,8 @@
         {
             // ISolver<State, SingleMoveSolution<BotCommand>> solver = null;
             // solver = solver.WithLogging(5);
-            return new BotCommand();
+            // return new BotCommand();
+            return default;
         }
     }
 }   
